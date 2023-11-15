@@ -16,7 +16,7 @@
         
         <div>
             <label for="newTodo">todo da aggiungere</label>
-            <input type="text" id="newTodo" v-model="newTodoList">
+            <input type="text" id="newTodo" v-model="newTodoList" @keyup.enter="addTodo">
             <button @click="addTodo">aggiungi</button>
         </div>
 
