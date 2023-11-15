@@ -16,8 +16,8 @@
         
         <div>
             <label for="newTodo">todo da aggiungere</label>
-            <input type="text" id="newTodo">
-            <button>aggiungi</button>
+            <input type="text" id="newTodo" v-model="newTodoList">
+            <button @click="addTodo">aggiungi</button>
         </div>
 
 
