@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO LIST</title>
+    <!-- COSTUM STYLE -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Vue.js FRAMEWORK -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+
+    <div id="app">
+        
+        <div>
+            <label for="newTodo">todo da aggiungere</label>
+            <input type="text" id="newTodo">
+            <button>aggiungi</button>
+        </div>
+
+
+        <ul>
+            <li v-for="(todo, index) in todoList" :key="index">
+                {{todo}}
+                <span>X</span>
+            </li>
+        </ul>
+
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
