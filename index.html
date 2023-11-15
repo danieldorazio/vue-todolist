@@ -24,7 +24,7 @@
         <ul>
             <li v-for="(todo, index) in todoList" :key="index">
                 {{todo}}
-                <span>X</span>
+                <span @click="clickDeleteTodo(index)">X</span>
             </li>
         </ul>
 
