@@ -15,15 +15,22 @@
     <div id="app">
         
         <div>
-            <label for="newTodo">todo da aggiungere</label>
-            <input type="text" id="newTodo" v-model="newTodoList" @keyup.enter="addTodo">
+            <!-- TEXT -->
+            <label for="todoText">todo da aggiungere</label>
+            <input type="text" id="todoText" v-model="newTodoList.text" @keyup.enter="addTodo">
+            
+            <!-- DONE -->
+            <label for="todoDone">completato</label>
+            <input type="checkbox" id="todoDone" v-model="newTodoList.done" >
+            
+            <!-- ADD -->
             <button @click="addTodo">aggiungi</button>
         </div>
 
 
         <ul>
-            <li v-for="(todo, index) in todoList" :key="index">
-                {{todo}}
+            <li v-for="(todo, index) in todoList" :key="index" :class="(todo.done) ? 'completed' : '' ">
+                {{todo.text}}
                 <span @click="clickDeleteTodo(index)">X</span>
             </li>
         </ul>
