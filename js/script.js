@@ -8,7 +8,9 @@ createApp ({
             newTodoList: {
                 text: "",
                 done: false,
+                
             },
+            todoDone: false,
         }
     },
 
@@ -24,6 +26,14 @@ createApp ({
             this.newTodoList.text = "";
             this.newTodoList.done = false;
         },
+
+        // changeDone: function(todoDone, index) {
+        //     this.todoDone = !todoDone
+        //     console.log(todoDone);
+        //     console.log(index);
+        //     this.todoDone = false;
+            
+        // }
     }
 }).mount("#app");
 
